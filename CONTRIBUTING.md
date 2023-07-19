@@ -1,6 +1,6 @@
 # <a name="commit"></a> Commit Message Guidelines
 
-We have very precise rules over how our git commit messages can be formatted.  This leads to **more
+We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**.
 
 ## Branch Naming Convention
@@ -28,14 +28,15 @@ Samples:
 feat/login-page
 ```
 
-
 To sum up, follow this pattern when branching:
+
 ```
 git branch <category/reference/description-in-kebab-case>
 ```
 
 ## Commit Message Format
-Each commit message consists of a **header**, and **body**.  The header has a special
+
+Each commit message consists of a **header**, and **body**. The header has a special
 format that includes a **type**, a **scope** and a **subject**:
 
 ```
@@ -52,51 +53,52 @@ to read on GitHub as well as in various git tools.
 Samples:
 
 ```
-docs(changelog): update changelog to beta.5
-```
-```
-feat(authentication): add user/login endpoint 
+feat(authentication): add user/login endpoint
 
-This commit adds a new API endpoint for user authentication and login. The login endpoint accepts a user's credentials (username and password) and returns an access token upon successful authentication. 
+This commit adds a new API endpoint for user authentication and login. The login endpoint accepts a user's credentials (username and password) and returns an access token upon successful authentication.
 ```
 
 ### Type
+
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-* **docs**: Documentation only changes
-* **feat**: A new feature
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-* **test**: Adding missing tests or correcting existing tests
+-   **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+-   **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+-   **docs**: Documentation only changes
+-   **feat**: A new feature
+-   **fix**: A bug fix
+-   **perf**: A code change that improves performance
+-   **refactor**: A code change that neither fixes a bug nor adds a feature
+-   **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+-   **test**: Adding missing tests or correcting existing tests
 
 ### Scope
+
 The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages.
 
 The following is the list of supported scopes:
 
-* **authentication**
-* **test-case**
-* **test-suite**
-* **project**
-* **test-run**
-* **test-execution**
-* **issue**
-* **test-environment**
-* **test-data**
-* **test-plan**
-* **user-roles**
+-   **authentication**
+-   **test-case**
+-   **test-suite**
+-   **project**
+-   **test-run**
+-   **test-execution**
+-   **issue**
+-   **test-environment**
+-   **test-data**
+-   **test-plan**
+-   **user-roles**
 
 ### Subject
+
 The subject contains a succinct description of the change:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize the first letter
-* no dot (.) at the end
+-   use the imperative, present tense: "change" not "changed" nor "changes"
+-   don't capitalize the first letter
+-   no dot (.) at the end
 
 ### Body
+
 Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
 The body should include the motivation for the change and contrast this with previous behavior.
