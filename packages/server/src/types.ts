@@ -3,6 +3,6 @@ const TYPES = {
     TestCaseService: Symbol.for('TestCaseService'),
     MongoClient: Symbol.for('MongoClient'),
     TestCaseController: Symbol.for('TestCaseController'),
-};
+}
 
-export default TYPES;
+export default TYPES

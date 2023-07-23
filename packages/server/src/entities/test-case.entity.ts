@@ -1,24 +1,24 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { TestCasePriority } from './test-case-priority.entity';
-import { TestCaseType } from './test-case-type.entity';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { TestCasePriority } from './test-case-priority.entity'
+import { TestCaseType } from './test-case-type.entity'
 
 @Entity()
 export class TestCase {
-    @PrimaryGeneratedColumn("uuid")
-    id?: string;
+    @PrimaryGeneratedColumn('uuid')
+    id?: string
 
     @Column()
-    description: string;
+    description: string
 
     @Column()
-    name: string;
+    name: string
 
     @Column()
-    type: TestCaseType;
+    type: TestCaseType
 
     @Column()
-    priority: TestCasePriority;
+    priority: TestCasePriority
 
     @Column()
-    precondition: string;
+    precondition: string
 }

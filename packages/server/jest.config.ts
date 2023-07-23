@@ -8,4 +8,4 @@ module.exports = {
     testMatch: ['**/?(*.)+(test).ts?(x)'],
     testPathIgnorePatterns: ['\\\\node_modules\\\\'],
     verbose: true,
-};
+}

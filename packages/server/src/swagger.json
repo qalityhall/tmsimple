@@ -1,0 +1,90 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TMSimple",
+        "description": "Simple Test Case Management System",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://virtserver.swaggerhub.com/DANIELJIMENEZO/tmsimple/1.0",
+            "description": "SwaggerHub API Auto Mocking"
+        }
+    ],
+    "paths": {
+        "/test-case": {
+            "post": {
+                "summary": "Create a test case.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/test-case"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Invalid data",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/inline_response_400"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "test-case": {
+                "required": ["description", "name", "priority", "type"],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "Acceptance",
+                            "Automation",
+                            "Funtional",
+                            "Regression",
+                            "Smoke"
+                        ]
+                    },
+                    "priority": {
+                        "type": "string",
+                        "enum": ["Critical", "High", "Medium", "Low"]
+                    },
+                    "precondition": {
+                        "type": "string"
+                    }
+                }
+            },
+            "inline_response_400": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
