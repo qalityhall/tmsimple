@@ -6,6 +6,7 @@ import { AppDataSource } from './services/persistence/app-data-source'
 import { InversifyExpressServer } from 'inversify-express-utils'
 import container from './inversify.config'
 import cors from 'cors'
+import browserSync from 'browser-sync'
 
 dotenv.config()
 
@@ -29,6 +30,12 @@ import swaggerUi from 'swagger-ui-express'
 import swaggerDocument from './swagger.json'
 
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
+const bs = browserSync.create()
+bs.init({
+    proxy: `http://localhost:${port}`,
+    open: false,
+})
 
 app.listen(port, () => {
     console.log(`⚡️[server]: Server is running at https://localhost:${port}`)
