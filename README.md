@@ -10,7 +10,7 @@ TMSimple is an open-source test case management tool designed to simplify the pr
 
 Before you begin, ensure you have the following prerequisites:
 
-- Docker: Make sure you have Docker installed on your system. You can download and install it from the official [Docker website](https://www.docker.com/get-started).
+-   Docker: Make sure you have Docker installed on your system. You can download and install it from the official [Docker website](https://www.docker.com/get-started).
 
 ## Installation
 
@@ -39,27 +39,27 @@ Follow these steps to install and set up TMSimple on your local machine:
     - Create a copy of the `.env.example` file and name it `.env`.
     - Update the database configuration in the `.env` file with your own database credentials.
 
-   ```bash
-   cp .env.example .env
-   ```
+    ```bash
+    cp .env.example .env
+    ```
 
-3. Open the `.env` file and set the desired environment variables, such as `MYSQL_ROOT_PASSWORD`, `MYSQL_USER`, etc.
+5. Open the `.env` file and set the desired environment variables, such as `MYSQL_ROOT_PASSWORD`, `MYSQL_USER`, etc.
 
-5. Run the following command to start the MySQL container:
+6. Run the following command to start the MySQL container:
 
-   ```bash
-   docker-compose up -d
-   ```
+    ```bash
+    docker-compose up -d
+    ```
 
 The MySQL database should now be up and running. You can connect to it using your preferred MySQL client using the provided connection details in the `.env` file.
 
-6. Start the application:
+7. Start the application:
 
     ```bash
     npm start
     ```
 
-7. Access TMSimple in your web browser at `http://localhost:3000`.
+8. Access TMSimple in your web browser at `http://localhost:3000`.
 
 ## Contributing
 
