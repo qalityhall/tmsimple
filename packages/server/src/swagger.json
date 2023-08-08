@@ -1,0 +1,146 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "TMSimple",
+		"description": "Simple Test Case Management System",
+		"version": "1.0"
+	},
+	"paths": {
+		"/testcase": {
+			"post": {
+				"summary": "Create a test case.",
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/testcase-request"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK"
+					},
+					"201": {
+						"description": "Created",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/testcase-response"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Invalid data",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/invalid-data"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"testcase-request": {
+				"required": [
+					"description",
+					"name",
+					"priority",
+					"type"
+				],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"example": "Login Test"
+					},
+					"description": {
+						"type": "string",
+						"example": "Test user login functionality"
+					},
+					"type": {
+						"type": "string",
+						"enum": [
+							"Acceptance",
+							"Automation",
+							"Funtional",
+							"Regression",
+							"Smoke"
+						]
+					},
+					"priority": {
+						"type": "string",
+						"enum": [
+							"Critical",
+							"High",
+							"Medium",
+							"Low"
+						]
+					},
+					"precondition": {
+						"type": "string",
+						"example": "User must have valid credentials"
+					}
+				}
+			},
+			"testcase-response": {
+				"required": [
+					"description",
+					"name",
+					"priority",
+					"type"
+				],
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string",
+						"enum": [
+							"Acceptance",
+							"Automation",
+							"Funtional",
+							"Regression",
+							"Smoke"
+						]
+					},
+					"priority": {
+						"type": "string",
+						"enum": [
+							"Critical",
+							"High",
+							"Medium",
+							"Low"
+						]
+					},
+					"precondition": {
+						"type": "string"
+					}
+				}
+			},
+			"invalid-data": {
+				"type": "object",
+				"properties": {
+					"errors": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}
