@@ -43,9 +43,9 @@ Follow these steps to install and set up TMSimple on your local machine:
    cp .env.example .env
    ```
 
-3. Open the `.env` file and set the desired environment variables, such as `MYSQL_ROOT_PASSWORD`, `MYSQL_USER`, etc.
+5. Open the `.env` file and set the desired environment variables, such as `MYSQL_ROOT_PASSWORD`, `MYSQL_USER`, etc.
 
-5. Run the following command to start the MySQL container:
+6. Run the following command to start the MySQL container:
 
    ```bash
    docker-compose up -d
@@ -53,13 +53,13 @@ Follow these steps to install and set up TMSimple on your local machine:
 
 The MySQL database should now be up and running. You can connect to it using your preferred MySQL client using the provided connection details in the `.env` file.
 
-6. Start the application:
+7. Start the application:
 
     ```bash
     npm start
     ```
 
-7. Access TMSimple in your web browser at `http://localhost:3000`.
+8. Access TMSimple in your web browser at `http://localhost:3000`.
 
 ## Contributing
 
