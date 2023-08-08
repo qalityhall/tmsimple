@@ -6,6 +6,12 @@ TMSimple is an open-source test case management tool designed to simplify the pr
 
 -   **Test Case Creation**: Create test cases with a defined structure, including title, description, steps, expected results, and attachments.
 
+## Prerequisites
+
+Before you begin, ensure you have the following prerequisites:
+
+- Docker: Make sure you have Docker installed on your system. You can download and install it from the official [Docker website](https://www.docker.com/get-started).
+
 ## Installation
 
 Follow these steps to install and set up TMSimple on your local machine:
@@ -13,7 +19,7 @@ Follow these steps to install and set up TMSimple on your local machine:
 1. Clone the TMSimple repository:
 
     ```bash
-    git clone https://github.com/qalityhall/tmpsimple.git
+    git clone https://github.com/qalityhall/tmsimple.git
     ```
 
 2. Navigate to the project directory:
@@ -33,11 +39,19 @@ Follow these steps to install and set up TMSimple on your local machine:
     - Create a copy of the `.env.example` file and name it `.env`.
     - Update the database configuration in the `.env` file with your own database credentials.
 
-5. Run the database migrations:
+   ```bash
+   cp .env.example .env
+   ```
 
-    ```bash
-    npm run migrate
-    ```
+3. Open the `.env` file and set the desired environment variables, such as `MYSQL_ROOT_PASSWORD`, `MYSQL_USER`, etc.
+
+5. Run the following command to start the MySQL container:
+
+   ```bash
+   docker-compose up -d
+   ```
+
+The MySQL database should now be up and running. You can connect to it using your preferred MySQL client using the provided connection details in the `.env` file.
 
 6. Start the application:
 
@@ -54,7 +68,7 @@ We appreciate and welcome contributions to TMSimple! To contribute, please follo
 1. Clone the TMSimple repository:
 
     ```bash
-    git clone https://github.com/qalityhall/tmpsimple.git
+    git clone https://github.com/qalityhall/tmsimple.git
     ```
 
 2. Create a new branch for your feature or bug fix. This helps keep your changes isolated from the main codebase. Use the following command to create a new branch:

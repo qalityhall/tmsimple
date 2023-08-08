@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/qalityhall/tmpsimple.git"
+        "url": "https://github.com/qalityhall/tmsimple.git"
     },
     "license": "MIT",
     "devDependencies": {

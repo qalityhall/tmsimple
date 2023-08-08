@@ -13,7 +13,7 @@
 					"content": {
 						"application/json": {
 							"schema": {
-								"$ref": "#/components/schemas/testcase"
+								"$ref": "#/components/schemas/testcase-request"
 							}
 						}
 					},
@@ -23,12 +23,22 @@
 					"200": {
 						"description": "OK"
 					},
+					"201": {
+						"description": "Created",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/testcase-response"
+								}
+							}
+						}
+					},
 					"400": {
 						"description": "Invalid data",
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/invalid_data"
+									"$ref": "#/components/schemas/invalid-data"
 								}
 							}
 						}
@@ -39,7 +49,49 @@
 	},
 	"components": {
 		"schemas": {
-			"testcase": {
+			"testcase-request": {
+				"required": [
+					"description",
+					"name",
+					"priority",
+					"type"
+				],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string",
+						"example": "Login Test"
+					},
+					"description": {
+						"type": "string",
+						"example": "Test user login functionality"
+					},
+					"type": {
+						"type": "string",
+						"enum": [
+							"Acceptance",
+							"Automation",
+							"Funtional",
+							"Regression",
+							"Smoke"
+						]
+					},
+					"priority": {
+						"type": "string",
+						"enum": [
+							"Critical",
+							"High",
+							"Medium",
+							"Low"
+						]
+					},
+					"precondition": {
+						"type": "string",
+						"example": "User must have valid credentials"
+					}
+				}
+			},
+			"testcase-response": {
 				"required": [
 					"description",
 					"name",
@@ -81,7 +133,7 @@
 					}
 				}
 			},
-			"invalid_data": {
+			"invalid-data": {
 				"type": "object",
 				"properties": {
 					"errors": {
