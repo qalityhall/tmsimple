@@ -53,13 +53,24 @@ Follow these steps to install and set up TMSimple on your local machine:
 
 The MySQL database should now be up and running. You can connect to it using your preferred MySQL client using the provided connection details in the `.env` file.
 
+7. Navigate to the server directory:
+   
+    ```bash
+    cd packages\server
+    ```
+9. Install the project dependencies:
+
+    ```bash
+    npm install
+    ```
+    
 7. Start the application:
 
     ```bash
-    npm start
+    npm run start
     ```
 
-8. Access TMSimple in your web browser at `http://localhost:3000`.
+8. Access TMSimple in your web browser at `http://localhost:3001`.
 
 ## Contributing
 
