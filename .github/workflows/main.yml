@@ -26,3 +26,4 @@ jobs:
             - uses: ArtiomTr/jest-coverage-report-action@v2
               with:
                   test-script: npm run unit-test
+                  working-directory: packages/server
