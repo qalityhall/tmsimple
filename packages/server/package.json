@@ -11,7 +11,7 @@
         "start:sync": "concurrently \"npm run start\" \"npm run browser-sync\"",
         "browser-sync": "browser-sync start --proxy \"http://localhost:3000\" --files \"public/**/*\"",
         "test": "jest",
-        "unit-test": "jest test/unit-testing",
+        "unit-test": "jest --collect-coverage --onlyChanged test/unit-testing ",
         "component-test": "jest test/component-testing",
         "start:db": "ts-node src/app.ts",
         "typeorm": "typeorm-ts-node-commonjs"
