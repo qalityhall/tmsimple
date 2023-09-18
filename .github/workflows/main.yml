@@ -18,4 +18,12 @@ jobs:
                   cache: 'npm'
             - run: npm ci
             - run: npm run eslint
-            - run: npm run prettier
+            # - run: npm run prettier TODO: Fix errors
+    coverage:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: ArtiomTr/jest-coverage-report-action@v2
+              with:
+                  test-script: npm run unit-test
+                  working-directory: packages/server

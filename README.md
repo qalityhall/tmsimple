@@ -117,7 +117,7 @@ To ensure a smooth review process, we recommend discussing significant changes o
 
 Please note that all contributions to TMSimple will be considered under the project's [MIT License](https://opensource.org/licenses/MIT). By contributing, you agree to license your contributions under the same license.
 
-We appreciate your effort and thank you for helping to make TMSimple even better!
+We appreciate your effort and thank you for helping to make TMSimple even better
 
 ## License
 

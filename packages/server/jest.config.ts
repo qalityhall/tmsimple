@@ -8,4 +8,12 @@ module.exports = {
     testMatch: ['**/?(*.)+(test).ts?(x)'],
     testPathIgnorePatterns: ['\\\\node_modules\\\\'],
     verbose: true,
+    coverageThreshold: {
+        global: {
+            branches: 55,
+            functions: 75,
+            lines: 64,
+            statements: -60,
+        },
+    },
 }
